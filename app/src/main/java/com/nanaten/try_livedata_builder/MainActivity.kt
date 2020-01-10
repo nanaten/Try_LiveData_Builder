@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             it.recyclerView.adapter = RecyclerViewAdapter()
         }
 
-
+        // observe時に livedata { ... } 内の処理が実行される
         viewModel.items.observe(this, Observer {
             binding.recyclerView.bindItems(it)
         })
